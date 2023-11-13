@@ -1,0 +1,38 @@
+.card{
+  border: 1px solid rgba(0,0,0, .4);
+
+  &.radius{
+    border-radius: 1rem
+  }
+}
+
+
+/* temp */
+body{
+  background: #000;
+}
+.card{
+  padding: 1.5em 2em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid #eceff133;
+  border-radius: 1.5rem;
+  position: relative;
+  width: 100%;
+
+  .overlay{
+    --r: calc( var(--x) - var(--lx));
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    user-select: none;
+    mask: radial-gradient(25rem 25rem at var(--r) var(--y), #000 1%, transparent 50%);
+    transition: 400ms mask ease;
+    will-change: mask;
+    background-color: #FF7F5022;
+    border-color: #FF7F50;
+    box-shadow: 0 0 0 1px inset #FF7F50;
+    border-radius: inherit;
+  }
+}
+
